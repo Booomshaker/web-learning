@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="index1.css">
+        <title>Facebook - 注册或登录</title>
+        <script type="text/javascript">
+            window.onload = function(){
+                var year = document.getElementById("birth_year")
+                var month = document.getElementById("birth_month")
+                var day =document.getElementById("birth_day")
+
+                for (var i = 2017; i > 1949; i--){
+                    var opt = document.createElement("option")
+                    opt.value = i
+                    opt.innerText = i
+                    year.appendChild(opt);
+                }
+                for (var i = 1; i < 13; i++){
+                    var opt = document.createElement("option")
+                    opt.value = i
+                    opt.innerText = i
+                    month.appendChild(opt)
+                }
+                if (year == 1 || year == 3 || year == 5 || year == 7 || year == 8 || year == 10 || year == 12){
+                    for (var i = 1; i < 32; i++){
+                    var opt = document.createElement("option")
+                    opt.value = i
+                    opt.innerText = i
+                    day.appendChild(opt)
+                } 
+                }else{
+                    for (var i = 1; i < 31; i++){
+                    var opt = document.createElement("option")
+                    opt.value = i
+                    opt.innerText = i
+                    day.appendChild(opt)
+                } 
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="topbar_container">
+            <div class="topbar">
+                <div class="topbar_left">
+                    <h1>facebook</h1>
+                </div>
+                <div class="topbar_right">
+                    <form action="">
+                        <table>
+                            <tr>
+                                <td><label for="email">邮箱或手机号</label></td>
+                                <td><label for="pass">密码</label></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" id="email">
+                                </td>
+                                <td>
+                                    <input type="text" id="pass">
+                                </td>
+                                <td>
+                                    <input type="submit" id="login" value="登录">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><a href="">忘记账户？</a></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div class="content_left">
+                    <div class="content_left_title">
+                        联系你我，分享生活，尽在 Facebook
+                    </div>
+                    <img src="1.png" alt="" height="194" width="536">
+                </div>
+                <div class="content_right">
+                    <div class="content_right_title">
+                        <div class="content_right_title1">注册</div>
+                        <div class="content_right_title2">永久免费使用</div>
+                    </div>
+                    <div class="registration_container">
+                        <form action="">
+                            <div class="fullname">
+                                <div class="firstname">
+                                    <div class="fullname_inside">
+                                        <input type="text" placeholder="  姓">
+                                    </div>         
+                                </div>
+                                <div class="lastname">
+                                    <div class="fullname_inside">
+                                        <input type="text" placeholder="  名">
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="mobile">
+                                <div class="mobile_inside">
+                                    <input type="text" placeholder="手机号或邮箱">
+                                </div>
+                            </div>
+                            <div class="pass">
+                                <div class="pass_inside">
+                                    <input type="text" placeholder="创建密码">
+                                </div>
+                            </div>
+                            <div class="birth">
+                                <div class="birth_title">
+                                    生日
+                                </div>
+                                <div class="birth_select">
+                                    <span>
+                                        <span>
+                                            <select aria-label="年" name="" id="birth_year"></select>
+                                            <select aria-label="月" name="" id="birth_month"></select>
+                                            <select aria-label="日" name="" id="birth_day"></select>
+                                        </span>
+                                    </span>
+                                    <a href="">为什么需要提供生日信息？</a>
+                                </div>
+                            </div>
+                            <div class="sex">
+                                <span class="sex_select">
+                                    <span>
+                                        <input type="radio" id="female">
+                                        <label for="female">女</label>
+                                    </span>
+                                    <span>
+                                        <input type="radio" id="male">
+                                        <label for="male">男</label>
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="inform_check">
+                                点击创建帐户，代表你同意我们的<a href="">条款</a>，并已阅读了我们的<a href="">数据使用政策</a>，包括 <a href="">Cookie 使用政策</a>。你可能会收到 Facebook 的短信通知，并可以随时退订。
+                            </div>
+                            <div class="accountCreate">
+                                <button type="submit">创建账户</button>
+                            </div>
+                        </form>
+                        <div class="registration_bottom">
+                            为名人、团体或企业<a href="">创建主页</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <nav class="footer_language">
+                <a>中文(简体)</a>
+                <a>Engash (US)</a>
+                <a>日本語</a>
+                <a>한국어</a>
+                <a>Français (France)</a>
+                <a>Bahasa Indonesia</a>
+                <a>Polski</a>
+                <a>Español</a>
+                <a>Português (Brasil)</a>
+                <a>Deutsch</a>
+                <a>Itaaano</a>
+            </nav>
+            <div class="line"></div>
+            <nav>
+                <a>注册</a>
+                <a>登录</a>
+                <a>手机</a>
+                <a>查找好友</a>
+                <a>公共主页</a>
+                <a>帮助中心</a>
+            </nav>
+            <div class="line"></div>
+            <div>
+                <table>
+                    <tr>
+                        <td>Messenger</td><td>Facebook Lite</td><td>用户</td><td>地点</td><td>游戏</td><td>位置</td>
+                        <td>名人</td><td>二手市场</td><td>小组</td><td>食谱</td><td>彩色气球</td>
+                    </tr>
+                    <tr>
+                        <td>Instagram</td><td>公司简介</td><td>创业广告</td><td>创业主页</td><td>开发者</td><td>招聘信息</td>
+                        <td>隐私权政策</td><td>Cookie</td><td>广告选项</td><td>条款</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="footer_bottom">Facebook © 2017</div>
+        </div>
+    </body>
+</html>
